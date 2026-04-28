@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "카제나 광고 없애기",
+  "version": "1.0",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://arca.live/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
